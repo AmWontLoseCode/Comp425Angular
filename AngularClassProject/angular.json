@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AngularClassProject": {
+    "AngProj": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/AngularClassProject",
+            "outputPath": "dist/AngProj",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -58,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "AngularClassProject:build"
+            "browserTarget": "AngProj:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "AngularClassProject:build:production"
+              "browserTarget": "AngProj:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AngularClassProject:build"
+            "browserTarget": "AngProj:build"
           }
         },
         "test": {
@@ -103,7 +103,7 @@
         }
       }
     },
-    "AngularClassProject-e2e": {
+    "AngProj-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -112,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "AngularClassProject:serve"
+            "devServerTarget": "AngProj:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "AngularClassProject:serve:production"
+              "devServerTarget": "AngProj:serve:production"
             }
           }
         },
@@ -132,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "AngularClassProject"
+  "defaultProject": "AngProj"
 }
