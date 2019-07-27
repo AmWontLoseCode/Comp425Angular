@@ -13,7 +13,9 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+// Amadou Tall-->
+//best practice export array and import it in app -component-->
+export const routingComponents = [AddComponent, HomeComponent, SearchComponent]
