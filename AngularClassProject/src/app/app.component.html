@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 
 
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -19,3 +20,38 @@
     <!-- Amadou Tall-->
     <!-- Routes views will go here-->
     
+=======
+<!-----<div class="container">
+    <div class="row">
+        <div class="col-4">
+           
+        </div>
+        <div class="col-4">
+                          
+        </div>
+        <div class="col-4">
+            
+        </div>
+    </div>
+</div>
+
+<app-main-nav></app-main-nav>
+
+<div >
+        <canvas baseChart
+            [chartType]= "'pie'"
+            [datasets]="pieChartData"
+            [labels]="pieChartLabels"
+            [options]="pieChartOptions"
+            [legend]="true"
+            [colors]="pieChartColor"
+            (chartClick)="onChartClick($event)">
+        </canvas>
+      </div>
+
+<router-outlet></router-outlet> -->
+
+
+<app-main-nav></app-main-nav>
+<router-outlet></router-outlet>
+>>>>>>> Stashed changes
