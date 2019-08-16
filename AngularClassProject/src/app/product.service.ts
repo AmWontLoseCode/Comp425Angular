@@ -32,8 +32,13 @@ export class ProductService {
       return this.httpClient.get(this.apiURL + 'product/productDescriptionEnglish/' + productDesc);
     }
   
+
     public getProductsByIdDesc (productId: number, productDesc: string){
       return this.httpClient.get(this.apiURL + 'product/' + productId + '/productIdAndProductDescriptionEnglish/' + productDesc);
+    }
+
+    public getAvailableProducts(){
+      return this.httpClient.get(this.apiURL + 'availableProducts');
     }
 
 

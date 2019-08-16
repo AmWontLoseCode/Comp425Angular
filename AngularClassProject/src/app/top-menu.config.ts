@@ -1,8 +1,8 @@
-import { Routes } from '@angular/router/src/config';import { HomeComponent } from './home/home.component';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 import { AddComponent } from './add/add.component';
 import { SearchComponent } from './search/search.component';
- '@angular/router';
-
+import { AppComponent } from './app.component';
 
 
 export const routerConfig: Routes = [
@@ -17,12 +17,12 @@ export const routerConfig: Routes = [
     },
     {
         path: '',
-        redirectTo: '/home',
+        redirectTo: 'home',
         pathMatch: 'full'
     },
     {
         path: '**',
-        redirectTo: '/home',
+        redirectTo: 'home',
         pathMatch: 'full'
     }
 ];

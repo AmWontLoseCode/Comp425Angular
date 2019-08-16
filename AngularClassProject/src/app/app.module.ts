@@ -1,14 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AddComponent } from './add/add.component';
 import { SearchComponent } from './search/search.component';
-<<<<<<< Updated upstream
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-=======
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
@@ -43,14 +39,10 @@ import {
 
 
 
->>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< Updated upstream
-    routingComponents
-=======
     AddComponent,
     HomeComponent,
     SearchComponent,
@@ -58,14 +50,10 @@ import {
     NotFoundComponent,
     NserverErrorComponent
 
->>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-<<<<<<< Updated upstream
-    BrowserAnimationsModule
-=======
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
@@ -85,7 +73,6 @@ import {
 
 
     MatSelectModule
->>>>>>> Stashed changes
   ],
   providers: [],
   bootstrap: [AppComponent]

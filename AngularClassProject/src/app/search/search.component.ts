@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule, ReactiveFormsModule, FormGroup, FormControl, FormBuilder, FormArray, Validators } from '@angular/forms';
+import { formGroupNameProvider } from '@angular/forms/src/directives/reactive_directives/form_group_name';
+import { formControlBinding } from '@angular/forms/src/directives/ng_model';
+import { ViewEncapsulation } from '@angular/core';
 
 import { ProductService } from '../product.service';
 
@@ -9,11 +13,6 @@ import { ProductService } from '../product.service';
 })
 export class SearchComponent implements OnInit {
 
-<<<<<<< Updated upstream
-  constructor() { }
-
-  ngOnInit() {
-=======
   // passing a key value pair object to the new FormGroup constructors. 
   // passing an instance of formcontrol
   addcomponentReactiveForm: FormGroup;
@@ -43,7 +42,6 @@ export class SearchComponent implements OnInit {
   // Getters and setters for the various field on my form.
   get productEnglish() {
     return this.addcomponentReactiveForm.get('productEnglish');
->>>>>>> Stashed changes
   }
 
   search(){
