@@ -1,19 +1,105 @@
-<!--<mat-card class="col-8 offset-2">
-  <h>Add a new event</h>
-  <form>
-    <mat-form_field>
-      <input placeholder="Name" matInput>
-    </mat-form_field>
-    <mat-form_field>
-      <input placeholder="Price" matInput type="number">
-    </mat-form_field>
-    <mat-form_field>
-      <textarea placeholder="Description" matInput type></textarea>
-    </mat-form_field>
+<p>Add Products</p>
 
-    <div class = "buttonContainer">
-    <button mat-flat-button color = "primary">Save</button>button>
-    <button mat-flat-button color = "add">Add</button>button>
-    </div>
-  </form>>
-</mat-card>-->
+<div class="example-container" [formGroup]="addcomponentReactiveForm">
+  <mat-form-field>
+    <input placeholder="Product English *" matInput formControlName="productEnglish" />
+    <mat-hint *ngIf="addcomponentReactiveForm.controls.productEnglish.untouched" align="end"
+      [ngStyle]="{color: hintColor}">
+      Value is required
+    </mat-hint>
+  </mat-form-field>
+  <mat-form-field>
+    <input placeholder="Product French *" matInput formControlName="productFrench" />
+    <mat-hint *ngIf="addcomponentReactiveForm.controls.productFrench.untouched" align="end"
+      [ngStyle]="{color: hintColor}">
+      Value is required
+    </mat-hint>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-hint *ngIf="addcomponentReactiveForm.controls.brandNameEnglish.untouched" align="end"
+      [ngStyle]="{color: hintColor}">
+      Value is required
+    </mat-hint>
+    <input matInput placeholder="Brand Name English *" formControlName="brandNameEnglish" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-hint align="end" *ngIf="addcomponentReactiveForm.controls.brandNameFrench.untouched"
+      [ngStyle]="{color: hintColor}">
+      Value is required
+    </mat-hint>
+    <input matInput placeholder="Brand Name French *" formControlName="brandNameFrench" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Product Type</mat-label>
+    <mat-hint align="end" *ngIf="addcomponentReactiveForm.controls.productType.untouched"
+      [ngStyle]="{color: hintColor}">
+      Value is required
+    </mat-hint>
+    <mat-select>
+      <mat-option *ngFor="let product of products" [value]="product.value">
+        {{product.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-hint align="end" *ngIf="addcomponentReactiveForm.controls.productIdentification.untouched"
+      [ngStyle]="{color: hintColor}">
+      Value is required
+    </mat-hint>
+    <input matInput placeholder="Additional Product Identification *" formControlName="productIdentification" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-hint *ngIf="addcomponentReactiveForm.controls.targetMarket.untouched" align="end"
+      [ngStyle]="{color: hintColor}">
+      Value is required
+    </mat-hint>
+    <input matInput placeholder="Target Market *" formControlName="targetMarket" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Target Market *</mat-label>
+    <mat-hint align="end" *ngIf="addcomponentReactiveForm.controls.targetMarket.untouched"
+      [ngStyle]="{color: hintColor}">
+      Value is required
+    </mat-hint>
+    <mat-select>
+      <mat-option *ngFor="let market of markets" [value]="market.value">
+        {{market.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+  <mat-form-field>
+    <mat-hint *ngIf="addcomponentReactiveForm.controls.productImageUrl.untouched" align="end"
+      [ngStyle]="{color: hintColor}">
+      Value is required
+    </mat-hint>
+    <input matInput placeholder="Product Image URL *" formControlName="productImageUrl" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Status *</mat-label>
+    <mat-hint align="end" *ngIf="addcomponentReactiveForm.controls.status.untouched" [ngStyle]="{color: hintColor}">
+      Value is required
+    </mat-hint>
+    <mat-select>
+      <mat-option *ngFor="let status of statuses" [value]="status.value">
+        {{status.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+ <!--Value:{{addcomponentReactiveForm.value | json}}--> 
+</div>
+<!--{{appComponentForm.value | json}}-->
+<div class="buttonContainer">
+  <button mat-raised-button [disabled]="addcomponentReactiveForm.invalid" color="primary">Add</button>
+  <button mat-flat-button>Cancel</button>
+</div>
+
+
+<router-outlet></router-outlet>
